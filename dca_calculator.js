@@ -8,6 +8,9 @@ const history = document.getElementById("history");
 generateTableButton.addEventListener("click", generateTable);
 clearHistoryButton.addEventListener("click", clearHistory);
 
+// Load history from local storage when the page loads
+loadHistory();
+
 function generateTable() {
     const entryCount = parseInt(entryCountInput.value);
 
@@ -44,11 +47,28 @@ function calculateDCA() {
     const dca = totalDCA / totalLot;
     resultContainer.innerHTML = `Tổng số lot là ${totalLot.toFixed(2)} tại giá ${dca.toFixed(2)}`;
     const historyEntry = document.createElement("div");
-    const historyText = `Đã vào ${entryCount} entry, với tổng số lot là ${totalLot.toFixed(2)} tại giá ${dca.toFixed(2)}`;
+    const historyText = `Có ${entryCount} entry với tổng số lot là ${totalLot.toFixed(2)} tại giá ${dca.toFixed(2)}`;
     historyEntry.textContent = historyText;
     history.appendChild(historyEntry);
+
+    // Save history to local storage
+    saveHistory();
 }
 
 function clearHistory() {
     history.innerHTML = "";
+
+    // Clear history in local storage
+    localStorage.removeItem("dcaHistory");
+}
+
+function loadHistory() {
+    const savedHistory = localStorage.getItem("dcaHistory");
+    if (savedHistory) {
+        history.innerHTML = savedHistory;
+    }
+}
+
+function saveHistory() {
+    localStorage.setItem("dcaHistory", history.innerHTML);
 }
