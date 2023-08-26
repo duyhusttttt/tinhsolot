@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính DCA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tính DCA</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="dca_calculator.html">Tính DCA</a></li>
+                <li><a href="earn_loss_calculator.html">Tính Earn/Loss</a></li>
+                 <li><a href="pip.html">Tính PIP</a></li>
+                 <li><a href="giau.html">Tính xem bao giờ giàu</a></li>
+                 <li><a href="vk.html">Tính xem bao giờ lấy vợ</a></li>
+                 <li><a href="infor.html">Giới thiệu trang web</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="calculator">
+            <label for="entryCount">Số lượng entry:</label>
+            <input type="number" id="entryCount">
+            <button id="generateTable">Tạo bảng</button>
+            <div id="tableContainer"></div>
+            <div id="resultContainer"></div>
+        </section>
+        <div id="historyContainer">
+            <h2>Lịch sử:</h2>
+            <button id="clearHistoryButton">Xoá lịch sử</button>
+            <div id="history"></div>
+        </div>
+    </main>
+    <script src="dca_calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính Earn/Loss</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tính Earn/Loss</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="dca_calculator.html">Tính DCA</a></li>
+                <li><a href="earn_loss_calculator.html">Tính Earn/Loss</a></li>
+                 <li><a href="pip.html">Tính PIP</a></li>
+                 <li><a href="giau.html">Tính xem bao giờ giàu</a></li>
+                 <li><a href="vk.html">Tính xem bao giờ lấy vợ</a></li>
+                 <li><a href="infor.html">Giới thiệu trang web</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="calculator">
+            <label for="giadatlenh">Giá đặt lệnh:</label>
+            <input type="number" id="giadatlenh" placeholder="Giá đặt lệnh">
+            <label for="earnLot">Khối lượng:</label>
+            <input type="number" id="earnLot" placeholder="Khối lượng">
+            <label for="earnTP">TP:</label>
+            <input type="number" id="earnTP" placeholder="TP">
+            <label for="earnSL">SL:</label>
+            <input type="number" id="earnSL" placeholder="SL">
+       
+            <button id="calculateEarnLossButton">Tính Earn và Loss</button>
+            <div id="earnLossResultContainer"></div>
+        </section>
+        <div id="historyContainer">
+            <h2>Lịch sử</h2>
+            <table id="history">
+                <thead>
+                    <tr>
+                        <th>Giá đặt lệnh</th>
+                        <th>Khối lượng</th>
+                        <th>TP</th>
+                        <th>SL</th>
+                        <th>Kết quả</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <button id="clearHistoryButton">Xoá lịch sử</button>
+        </div>
+    </main>
+    <script src="earn_loss_calculator.js"></script>
+</body>
+</html>
