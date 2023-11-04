@@ -1,0 +1,114 @@
+/* Thiết lập giao diện chung */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(201, 237, 253);
+}
+
+header {
+    background-image: url('backgr.png');
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+main {
+    padding: 2em;
+}
+
+/* Giao diện cho tính toán */
+.calculator {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calculator label,
+.calculator input,
+.calculator select {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.calculator button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.calculator button:hover {
+    background-color: #444;
+}
+
+#historyContainer {
+    margin-top: 20px;
+}
+
+#history {
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+#history h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#history table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#history th,
+#history td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+#history th {
+    background-color: #f2f2f2;
+}
+
+#clearHistoryButton {
+    margin-top: 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#clearHistoryButton:hover {
+    background-color: #c0392b;
+}
+

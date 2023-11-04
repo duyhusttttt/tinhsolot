@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính số Lot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="your-logo.png">
+</head>
+<body>
+    <header>
+        <h1>Tính số Lot</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="dca_calculator.html">Tính DCA</a></li>
+                <li><a href="earn_loss_calculator.html">Tính Earn/Loss</a></li>
+                <li><a href="pip.html">Tính PIP</a></li>
+                <li><a href="giau.html">Tính xem bao giờ giàu</a></li>
+                <li><a href="vk.html">Tính xem bao giờ lấy vợ</a></li>
+                <li><a href="infor.html">Giới thiệu trang web</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="calculator">
+            <label for="lossAmount">Chọn mức thua lỗ:</label>
+            <select id="lossAmount">
+                <option value="80">80$</option>
+                <option value="200">200$</option>
+            </select>
+            <div>
+                <label for="pipLoss">Nhập số pip thua lỗ :</label>
+                <input type="number" id="pipLoss" placeholder="Số pip">
+            </div>
+            <label for="commodity">Chọn loại hàng hóa:</label>
+            <select id="commodity">
+                <option value="USD">USD</option>
+                <option value="CHF_EUR">CHF và EUR</option>
+                <option value="NZD_AUD">NZD và AUD</option>
+                <option value="JPY">JPY</option>
+                <option value="USOIL">USOIL</option>
+                <option value="US30">US30</option>
+            </select>
+            <button id="calculateLotButton">Tính số lot</button>
+            <div id="lotResultContainer"></div>
+        </section>
+        <div id="historyContainer">
+            <h2>Lịch sử:</h2>
+            <ul id="history"></ul>
+            <button id="clearHistoryButton">Xoá lịch sử</button>
+        </div>
+    </main>
+    <script src="pip_calculator.js"></script>
+</body>
+</html>
