@@ -25,7 +25,7 @@ function calculateLot() {
                 lotSize = (lossAmount / pipLoss) / 10 * 1.5;
                 break;
             case "USOIL":
-                lotSize = (lossAmount / pipLoss) / 10;
+                lotSize = (lossAmount / pipLoss) ;
                 break;
             case "US30":
                 lotSize = (lossAmount / pipLoss) ;
