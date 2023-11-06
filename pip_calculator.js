@@ -28,7 +28,7 @@ function calculateLot() {
                 lotSize = (lossAmount / pipLoss) / 10;
                 break;
             case "US30":
-                lotSize = (lossAmount / pipLoss) / 10;
+                lotSize = (lossAmount / pipLoss) ;
                 break;
         }
     }
