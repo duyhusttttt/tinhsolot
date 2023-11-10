@@ -15,11 +15,11 @@ function calculateLot() {
             case "USD":
                 lotSize = (lossAmount / pipLoss) / 10;
                 break;
-            case "CHF_EUR":
+            case "CHF":
                 lotSize = (lossAmount / pipLoss) / 10 * 0.9;
                 break;
-            case "NZD_AUD":
-                lotSize = (lossAmount / pipLoss) / 10 * 1.7;
+            case "NZDorAUD":
+                lotSize = (lossAmount / pipLoss) / 10 * 1.455;
                 break;
             case "JPY":
                 lotSize = (lossAmount / pipLoss) / 10 * 1.5;
